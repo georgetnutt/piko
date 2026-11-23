@@ -276,15 +276,9 @@ public class Pref {
     }
 
     public static int timelineTab(int tabId) {
+        // Locked: For You is always hidden (Following tab id 34), regardless of settings.
         if(tabId == 17 || tabId == 34){
-            String val = Utils.getStringPref(Settings.CUSTOM_TIMELINE_TABS);
-            // If you want to hide forYou send followin tab Id and vice-versa.
-            if(val.equals("hide_forYou")){
-                return 34;
-            }
-            if (val.equals("hide_following")){
-                return 17;
-            }
+            return 34;
         }
         return tabId;
     }

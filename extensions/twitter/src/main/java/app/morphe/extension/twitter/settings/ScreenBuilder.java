@@ -754,15 +754,7 @@ public class ScreenBuilder {
                     )
             );
         }
-        if (SettingsStatus.timelineTabCustomisation) {
-           addPreference(category,
-                    helper.listPreference(
-                            str("piko_pref_customisation_timelinetabs"),
-                            str("piko_pref_app_restart_rec"),
-                            Settings.CUSTOM_TIMELINE_TABS
-                    )
-            );
-        }
+        // Timeline tabs toggle removed: For You is permanently hidden.
         if (SettingsStatus.exploreTabCustomisation) {
             addPreference(category,
                     helper.multiSelectListPref(
